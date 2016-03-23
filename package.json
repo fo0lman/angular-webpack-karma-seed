@@ -1,0 +1,64 @@
+{
+  "name": "angular-webpack-gulp-karma-seed",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack-dev-server",
+    "test": "karma start"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "foolman",
+  "license": "ISC",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "#README",
+  "dependencies": {
+    "angular": "^1.5.0",
+    "angular-animate": "^1.5.0",
+    "angular-touch": "^1.5.0",
+    "angular-mocks": "^1.4.4",
+    "angular-ui-router": "^0.2.15",
+    "bootstrap": "^3.3.6",
+    "jquery": "^2.2.1"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^1.1.1",
+    "css-loader": "^0.16.0",
+    "eslint": "^1.1.0",
+    "eslint-loader": "^1.0.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.8.5",
+    "gulp": "^3.8.7",
+    "gulp-jshint": "^1.9.2",
+    "gulp-util": "^3.0.4",
+    "html-webpack-plugin": "^2.10.0",
+    "isparta-loader": "^2.0.0",
+    "jshint-stylish": "^1.0.1",
+    "karma": "^0.13.22",
+    "karma-chrome-launcher": "^0.2.2",
+    "karma-coverage": "^0.5.5",
+    "karma-firefox-launcher": "^0.1.7",
+    "karma-ie-launcher": "^0.2.0",
+    "karma-jasmine": "^0.1.5",
+    "karma-opera-launcher": "^0.3.0",
+    "karma-phantomjs-launcher": "^0.1.4",
+    "karma-webpack": "^1.7.0",
+    "ng-cache-loader": "0.0.15",
+    "node-sass": "^3.2.0",
+    "object-assign": "^3.0.0",
+    "path": "^0.12.7",
+    "raw-loader": "^0.5.1",
+    "sass-loader": "^2.0.1",
+    "style-loader": "^0.12.3",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.12.14",
+    "webpack-dev-server": "^1.14.1",
+    "webpack-notifier": "^1.2.1"
+  }
+}
