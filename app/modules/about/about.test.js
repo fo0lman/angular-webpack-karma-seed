@@ -1,41 +1,38 @@
 "use strict";
 
+var inject = angular.mock.inject,
+    module = angular.mock.module,
+    testModule = require("./index.js");
+
 describe('About Controller', function () {
 
-    var aboutModule = require("./index.js");
-    var sut, deferred;
+    var sut,
+        deferred;
 
     beforeEach(function () {
-        angular.mock.module('ui.router');
+        module('ui.router');
 
-        angular.mock.module(aboutModule);
+        module(testModule);
 
-        var mockAboutService = {
-            "getLocation" : jasmine.createSpy("AboutService getLocation")
-        };
+        var mockAboutService = {};
 
-        angular.mock.module(function ($provide) {
+        module(function ($provide) {
             $provide.value("AboutService", mockAboutService);
             $provide.value("$state", {});
         });
 
-        angular.mock.inject(function($q) {
+        inject(function($q) {
             deferred = $q.defer();
-
-            mockAboutService.location = 'Wellcome to about page';
             mockAboutService.getLocation = function() {};
-
             spyOn(mockAboutService, 'getLocation').andReturn(deferred.promise);
         });
 
-    });
-
-    beforeEach(function () {
-        angular.mock.inject(function ($controller, $rootScope) {
+        inject(function ($controller, $rootScope) {
             sut = $controller("AboutCtrl", {
                 $scope : $rootScope
             });
         });
+
     });
 
     it('should be defined', function () {
